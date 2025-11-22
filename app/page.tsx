@@ -1,7 +1,7 @@
 import { Hero } from "@/components/hero"
-import { PowerClinicMethod } from "@/components/power-clinic-method"
+import MetodoSection from "@/components/power"
 import { Services } from "@/components/services"
-import { TrainingSection } from "@/components/training-section"
+import { ServicesSection } from "@/components/training-section"
 import { Results } from "@/components/results"
 import { VideoTestimonials } from "@/components/video-testimonials"
 import { ExclusivityBanner } from "@/components/exclusivity-banner"
@@ -13,9 +13,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <PowerClinicMethod />
+      <MetodoSection/>
       <Services />
-      <TrainingSection />
+      <ServicesSection />
       <Results />
       <VideoTestimonials />
       <ExclusivityBanner />
