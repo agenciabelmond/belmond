@@ -77,8 +77,8 @@ export function Hero() {
                 size="lg"
                 // NOVO: Adicionado brilho neon ao botão principal
                 className="bg-[#e9d2a6] text-white hover:bg-[#e9d2a6]/90 text-lg px-8 py-5 font-semibold rounded-lg shadow-2xl shadow-[#e9d2a6]/30 transition-all hover:scale-105 
-[box-shadow:0_0_15px_#e9d2a6,0_0_30px_#e9d2a6] 
-hover:[box-shadow:0_0_20px_#e9d2a6,0_0_40px_#e9d2a6]"
+[box-shadow:0_0_8px_#e9d2a6,0_0_15px_#e9d2a6] 
+hover:[box-shadow:0_0_10px_#e9d2a6,0_0_20px_#e9d2a6]"
               >
                 Agendar reunião
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -89,8 +89,7 @@ hover:[box-shadow:0_0_20px_#e9d2a6,0_0_40px_#e9d2a6]"
                 variant="outline"
                 size="lg"
                 // NOVO: Borda com efeito neon
-                className="text-white border border-[#00f9ff]/50 hover:border-[#00f9ff] hover:text-[#000000] bg-transparent text-lg px-8 py-5 font-semibold rounded-lg transition-all [box-shadow:0_0_5px_rgba(0,249,255,0.2)] hover:[box-shadow:0_0_10px_rgba(0,249,255,0.8)]"
-              >
+               className="text-white border border-[#ffffff]/50 hover:border-[#ffffff] hover:text-[#000000] bg-transparent text-lg px-8 py-5 font-semibold rounded-lg transition-all [box-shadow:0_0_5px_rgba(255,255,255,0.2)] hover:[box-shadow:0_0_10px_rgba(255,255,255,0.8)]">
                 Entender como funciona
               </Button>
             </div>
@@ -100,20 +99,17 @@ hover:[box-shadow:0_0_20px_#e9d2a6,0_0_40px_#e9d2a6]"
           <div className="flex-1 flex justify-center items-center p-4 rounded-xl relative w-full mx-auto md:max-w-none md:mx-0">
             
             {/* Container da Imagem Única com Dimensões Aumentadas */}
-            <div className="relative w-full max-w-2xl h-[450px] md:h-[550px] rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 ease-in-out border border-[#00f9ff]/20"> {/* Borda sutil neon */}
+          <div className="relative w-full max-w-2xl h-[450px] md:h-[550px] rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 ease-in-out border border-[#f3f4f6]"> {/* Borda sutil cinza claro */}
               <Image 
-                src="inicio.png" 
-                alt="Imagem Principal de Capa" 
-                layout="fill" 
-                objectFit="cover" 
-                className="rounded-xl" 
+                  src="capa.png" 
+                  alt="Imagem Principal de Capa" 
+                  layout="fill" 
+                  objectFit="cover" 
+                  className="rounded-xl" 
               />
-            </div>
-
-            {/* Overlay sutil neon */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#00f9ff]/5 to-transparent pointer-events-none rounded-xl"></div>
-            
           </div>
+            {/* Overlay sutil neon */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ffffff]/5 to-transparent pointer-events-none rounded-xl"></div>          </div>
         </div>
       </section>
     </div>

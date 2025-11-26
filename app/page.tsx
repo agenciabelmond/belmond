@@ -1,7 +1,7 @@
 import { Hero } from "@/components/hero"
 import MetodoSection from "@/components/power"
 import { Services } from "@/components/services"
-import { ServicesSection } from "@/components/training-section"
+import RevenueCycleSection from "@/components/training-section"
 import { Results } from "@/components/results"
 import { VideoTestimonials } from "@/components/video-testimonials"
 import { ExclusivityBanner } from "@/components/exclusivity-banner"
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <MetodoSection/>
       <Services />
-      <ServicesSection />
+      <RevenueCycleSection/>
       <Results />
       <VideoTestimonials />
       <ExclusivityBanner />
