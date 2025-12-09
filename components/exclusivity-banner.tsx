@@ -4,19 +4,6 @@ export function ExclusivityBanner() {
   return (
     <section className="pt-8 pb-16 bg-black relative overflow-hidden">
 
-
-      {/* Fundo com grid dourado (mesmo estilo do outro componente) */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `
-            linear-gradient(#e9d2a6 1px, transparent 1px),
-            linear-gradient(90deg, #e9d2a6 1px, transparent 1px)
-          `,
-          backgroundSize: "80px 80px",
-        }}
-      />
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
@@ -25,9 +12,10 @@ export function ExclusivityBanner() {
             <span className="text-sm font-medium text-white">Exclusividade Garantida</span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Trabalhamos com <span className="text-[#F4D27A]">contrato de exclusividade</span> por região
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">
+        Trabalhamos com <span className="text-[#F4D27A]">contrato de exclusividade</span> por região
+        </h2>
+
 
           <p className="text-xl text-white/80 mb-8">
             Garantimos que você será o único cliente da sua região, sem concorrência direta.

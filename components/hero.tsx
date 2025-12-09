@@ -34,6 +34,7 @@ export function Hero() {
   return (
     <div className={`${openSans.className} min-h-screen bg-[#0a0f18] text-white`}>
       <section className="relative w-full bg-black text-white min-h-screen">
+        
         {/* Faixa topo */}
         <div className="w-full bg-[#F4D27A] text-black text-center font-semibold py-3 text-sm tracking-wide">
           EXCLUSIVO PARA CLÍNICAS QUE QUEREM FATURAR MAIS
@@ -41,23 +42,25 @@ export function Hero() {
 
         {/* MOBILE */}
         <div className="md:hidden">
-          <div className="container mx-auto max-w-7xl px-6 pt-8 pb-20 flex flex-col gap-6">
-            <p className="text-sm uppercase tracking-[0.18em] text-[#F7DFA1] ">
-              Gestão, performance e análise
+          <div className="container mx-auto max-w-7xl px-6 pt-8 pb-20 flex flex-col gap-6 items-center">
+            
+            <p className="text-sm uppercase tracking-[0.18em] text-[#F7DFA1] text-center">
+              Estratégia, gestão e performance para clínicas
             </p>
-
-            <h1 className="text-4xl font-extrabold leading-tight ">
-              Potencialize o crescimento da sua clínica com o {" "}
+            <h1
+              className="text-left text-5xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-10 text-balance"
+            >
+              Potencialize o crescimento da sua clínica com o{" "}
               <span className="text-[#F4D27A]">PowerClinic</span>
             </h1>
 
-            <div className="relative w-full ">
+
+            <div className="relative w-full">
               <img
                 src="/equipe.png"
                 alt="Equipe PowerClinic"
-                className="w-full rounded-xl object-cover scale-[1.08]"
+                className="w-full rounded-xl object-cover scale-[0.9]"
               />
-
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent via-black/70 to-black" />
 
               <div className="absolute right-3 bottom-[-40px] flex flex-col gap-3 items-end">
@@ -77,14 +80,15 @@ export function Hero() {
               </div>
             </div>
 
+            {/* Botão */}
             <Button
               size="lg"
-              className="bg-[#25D366] text-black hover:bg-[#25D366]/90 text-lg px-10 py-5 font-semibold rounded-lg mt-14 "
+              className="bg-[#1EB85A] text-white hover:bg-[#1EB85A]/90 text-xl px-12 py-6 font-semibold rounded-lg shadow-[0_0_30px_#1EB85A88] animate-[pulseGlow_2s_ease-in-out_infinite] flex items-center gap-3 mt-8"
             >
-              Fale com um especialista
+              Fale com um Especialista
             </Button>
 
-            <p className="text-base text-gray-200 ">
+            <p className="text-base text-gray-200 mt-4 text-center max-w-md">
               Entenda como grandes clínicas brasileiras estão aumentando o seu faturamento
               com a nossa parceria e a nossa estratégia.
             </p>
@@ -94,26 +98,27 @@ export function Hero() {
         {/* DESKTOP */}
         <div className="hidden md:block">
           <div className="container mx-auto max-w-7xl px-6 pt-24 pb-28 grid grid-cols-[1.1fr_1.6fr] gap-10 items-center">
+            
             <div className="space-y-8 md:pr-4">
-              <p className="text-sm md:text-base uppercase tracking-[0.18em] text-[#F7DFA1] ">
+              <p className="text-sm md:text-base uppercase tracking-[0.18em] text-[#F7DFA1]">
                 Estratégia, gestão e performance para clínicas
               </p>
 
-              <h1
-                className="text-left  text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
-              >
-                Potencialize o crescimento da sua clínica com o {" "}
-                <span className="text-[#F4D27A]">PowerClinic</span>
-              </h1>
+            <h1
+              className="text-left text-5xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-10 text-balance"
+            >
+              Potencialize o crescimento da sua clínica com o{" "}
+              <span className="text-[#F4D27A]">PowerClinic</span>
+            </h1>
 
               <Button
                 size="lg"
-                className="bg-[#1EB85A] text-white hover:bg-[#1EB85A]/90 text-xl px-12 py-6 font-semibold rounded-lg shadow-[0_0_30px_#1EB85A88] animate-[pulseGlow_2s_ease-in-out_infinite] flex items-center gap-3 "
+                className="bg-[#1EB85A] text-white hover:bg-[#1EB85A]/90 text-xl px-12 py-6 font-semibold rounded-lg shadow-[0_0_30px_#1EB85A88] animate-[pulseGlow_2s_ease-in-out_infinite] flex items-center gap-3"
               >
                 Fale com um Especialista
               </Button>
 
-              <p className="text-base md:text-lg text-gray-200 max-w-xl ">
+              <p className="text-base md:text-lg text-gray-200 max-w-xl">
                 Entenda como grandes clínicas brasileiras estão aumentando o seu faturamento
                 com a nossa parceria e a nossa estratégia.
               </p>
@@ -126,7 +131,6 @@ export function Hero() {
                   alt="Equipe PowerClinic"
                   className="w-full max-w-none rounded-xl object-cover scale-[0.9]"
                 />
-
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent via-black/70 to-black" />
 
                 <div className="absolute right-6 bottom-[-30px] flex flex-col gap-4 items-end">

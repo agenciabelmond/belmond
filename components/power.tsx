@@ -19,17 +19,7 @@ export default function App() {
       <section className="pt-12 pb-20 px-6 bg-black relative overflow-hidden">
 
 
-        {/* Quadriculado dourado suave */}
-        <div
-          className="absolute inset-0 opacity-5 pointer-events-none"
-          style={{
-            backgroundImage: `
-              linear-gradient(#e9d2a6 1px, transparent 1px),
-              linear-gradient(90deg, #e9d2a6 1px, transparent 1px)
-            `,
-            backgroundSize: "80px 80px",
-          }}
-        />
+   
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -49,13 +39,12 @@ export default function App() {
                 </span>
               </div>
 
-              {/* Título Montserrat */}
-            <h1
-              className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
-            >
-              Impulsione os Resultados da Sua Clínica
-            </h1>
+        
+              <h1 className="text-5xl font-serif text-white text-left mb-10 tracking-wide">
+                Impulsione os Resultados da Sua Clínica
+              </h1>
+
+
 
               <p className="text-white text-lg mb-6 leading-relaxed">
                 Na Belmond, ajudamos clínicas a crescer de forma consistente e lucrativa. Unimos criatividade, dados e estratégias inteligentes para atrair mais pacientes e aumentar seu faturamento.

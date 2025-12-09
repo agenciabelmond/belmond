@@ -41,9 +41,10 @@ export function FaqSection() {
               FAQ
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Perguntas Frequentes
-          </h2>
+         <h2 className="text-5xl md:text-5xl font-serif text-white">
+          Perguntas Frequentes
+        </h2>
+
           <p className="mt-3 text-lg leading-relaxed text-white/70">
             Encontre respostas sobre como funciona nosso treinamento, monitoramento e gestão de performance para clínicas.
           </p>

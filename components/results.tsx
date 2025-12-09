@@ -74,20 +74,7 @@ export function Results() {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
 
   return (
-    <section className="pt-20 pb-[0px] px-4 relative overflow-hidden bg-black">
-
-
-
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(#e9d2a6 1px, transparent 1px),
-            linear-gradient(90deg, #e9d2a6 1px, transparent 1px)
-          `,
-          backgroundSize: "80px 80px",
-        }}
-      />
+   <section className="pt-12 pb-[0px] px-4 relative overflow-hidden bg-black">
 
       {/* Glow Effects */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
@@ -110,13 +97,16 @@ export function Results() {
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center mb-12 space-y-3">
-          <p className="text-xs md:text-sm tracking-[0.22em] uppercase text-[#e9d2a6]">
-            Soluções completas para clínicas em diferentes momentos
-          </p>
+       <p className="text-xs md:text-sm tracking-[0.22em] uppercase text-[#e9d2a6]">
+        Soluções completas para clínicas em diferentes momentos
+      </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-sm">
-            Temos uma solução para cada necessidade da sua clínica.
-          </h1>
+      <h1
+        className="text-5xl md:text-5xl lg:text-6xl font-serif text-white text-center mb-10 text-balance"
+      >
+        Temos uma solução para cada necessidade da sua clínica.
+      </h1>
+
 
           <p className="text-lg md:text-xl text-white/80 mt-4 max-w-2xl md:max-w-3xl mx-auto">
             Do primeiro anúncio à organização do atendimento e do comercial,
@@ -225,14 +215,15 @@ export function Results() {
 
         {/* CTA FINAL */}
         <div className="w-full flex justify-center mt-4 mb-20">
-          <a
-            href="https://wa.me/5511999999999?text=Olá! Quero entender qual solução da Belmond faz mais sentido para a minha clínica."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-6 py-3 rounded-lg font-semibold transition"
-          >
-            Agende uma conversa e descubra seu melhor plano
-          </a>
+        <a
+        href="https://wa.me/5511999999999?text=Olá! Quero entender qual solução da Belmond faz mais sentido para a minha clínica."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#1EB85A] text-white hover:bg-[#1EB85A]/90 px-6 py-3 rounded-lg font-semibold shadow-[0_0_30px_#1EB85A88] animate-[pulseGlow_2s_ease-in-out_infinite] transition flex items-center justify-center"
+      >
+        Fale com um especialista e descubra o melhor plano para a sua clínica!
+      </a>
+
         </div>
 
       </div>
