@@ -62,7 +62,8 @@ export function SocialProofSection() {
           </div>
 
           {/* Video Grid */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-12">
+
 
             {/* Video 1 */}
             <div className="group relative">
