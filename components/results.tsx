@@ -1,183 +1,241 @@
 "use client"
-"use client"
+
 import { useState } from "react"
-import { Card } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import FloatingLines from "@/components/FloatingLines"
 
 export function Results() {
   const slides = [
     {
-      title: "Tráfego Pago",
-      subtitle: "Gestão dos seus anúncios online no Google e Meta",
+      title: "Monitoramento e Treinamento Comercial",
+      subtitle:
+        "Acompanhamento diário da equipe comercial da clínica com feedbacks, relatórios detalhados e planos de ação contínuos para maximizar resultados.",
       points: [
-        "Atraia seus clientes para seu funil de vendas",
-        "Abasteça seu atendimento com oportunidades de venda",
-        "Tenha mais previsibilidade e mensure o retorno do seu investimento",
+        "Condução inteligente da conversa em todos os canais",
+        "Estrutura completa de vendas, especialmente pensada para clínicas.",
+        "Mais de 40 scripts validados e adaptáveis ao seu time",
       ],
-      image: "/images/paginas.jpg",
+      image: "/treinamento.png",
+      icon: "📊",
+    },
+    {
+      title: "Tráfego Pago",
+      subtitle:
+        "Gestão inteligente das campanhas no Google e Meta, ajustada ao momento e às necessidades da sua clínica para gerar resultados consistentes.",
+      points: [
+        "Alcance os pacientes ideais e qualifique seu funil de vendas.",
+        "Gere oportunidades diariamente para o atendimento da clínica.",
+        "Otimize campanhas com base em dados e performance real.",
+      ],
+      image: "/trafego.jpg",
+      icon: "🎯",
     },
     {
       title: "Gestão de Mídia Social",
       subtitle:
-        "Seus anúncios criados pelos copywriters e designers da Belmond",
+        "Conteúdos e anúncios feitos pelos copywriters e designers da Belmond, pensando em conversão e relacionamento.",
       points: [
-        "Mais foco em conversão, não apenas estética",
-        "Criados com base na experiência de mais de 100 clínicas atendidas",
-        "Feitos por profissionais que recebem treinamento constantemente",
+        "Mais foco em agendamento, não apenas em estética",
+        "Criados com base na experiência de mais de 100 clínicas",
+        "Produção contínua por um time em constante atualização",
       ],
-      image: "/images/paginas.jpg",
+      image: "/gestaomidiasocial.png",
+      icon: "📱",
     },
     {
       title: "Soluções Comerciais",
-      subtitle: "A expertise do nosso time de vendas à disposição da sua empresa",
-      points: [
-        "Estruturamos todo o seu comercial do zero",
-        "Treinamos e desenvolvemos seus vendedores",
-        "Fornecemos nossos executivos para venderem seu serviço ou produto",
-      ],
-      image: "/images/paginas.jpg",
-    },
-    {
-      title: "Páginas",
-      subtitle: "Landing pages projetadas para gerar oportunidades reais",
-      points: [
-        "Feitas com as melhores práticas do mercado digital",
-        "Fácil de implementar e editar",
-        "Projetadas com as melhores ferramentas do mercado",
-      ],
-      image: "/images/paginas.jpg",
-    },
-    {
-      title: "Monitoramento e Acompanhamento",
       subtitle:
-        "Acompanhamento diário do atendimento da clínica com feedbacks e relatórios",
-      points: [],
-      image: "/images/paginas.jpg",
+        "Estruturamos, otimizamos e potencializamos o setor comercial da sua clínica para acompanhar o crescimento e gerar resultados consistentes.",
+      points: [
+        "Montamos sua equipe comercial do zero ou reorganizamos estruturas existentes.",
+        "Treinamos e desenvolvemos sua equipe de atendimento e vendas para máxima performance.",
+        "Implementação de processos inteligentes e métricas para acompanhamento de resultados.",
+      ],
+      image: "/solucaocomercial.png",
+      icon: "💼",
+    },
+    {
+      title: "Landing Page",
+      subtitle:
+        "Landing pages estrategicamente desenhadas para transformar tráfego em agendamentos, alinhadas ao tipo de campanha da sua clínica.",
+      points: [
+        "Desenvolvidas com as melhores práticas de marketing digital para máxima conversão.",
+        "Fáceis de implementar, editar e testar diferentes versões para otimização contínua.",
+        "Foco em gerar resultados mensuráveis e acelerar o funil de vendas da clínica.",
+      ],
+      image: "/siterbs (3).png",
+      icon: "💻",
     },
   ]
 
   const [current, setCurrent] = useState(0)
-
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length)
-  const prevSlide = () =>
-    setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
+  const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
 
   return (
-    <section
-      id="resultados"
-      className="relative py-20 bg-[#050510] overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a25] via-transparent to-black opacity-60"></div>
-      <div className="container relative mx-auto px-6 text-center mb-2 space-y-4 -mt-4">
+    <section className="pt-20 pb-[0px] px-4 relative overflow-hidden bg-black">
 
-        <span className="px-4 py-1.5 text-sm rounded-full bg-white text-[#e9d2a6] border border-white/10">
-          O QUE FAZEMOS NA BELMOND
-        </span>
 
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight relative top-1">
 
-            Muito além de números.
-          <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-[#e9d2a6] to-[#bfa574]">
-            Transformações Reais.
-          </span>
-        </h2>
+      <div
+        className="absolute inset-0 opacity-5 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(#e9d2a6 1px, transparent 1px),
+            linear-gradient(90deg, #e9d2a6 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+        }}
+      />
 
-        <p className="text-lg md:text-xl text-black/70 leading-relaxed max-w-3xl mx-auto">
-          Conheça tudo o que trabalhamos para gerar resultados consistentes e crescimento
-          previsível para sua clínica.
-        </p>
+      {/* Glow Effects */}
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
+        <div
+          className="absolute top-20 right-10 w-[500px] h-[500px] rounded-full opacity-40 blur-3xl animate-pulse"
+          style={{
+            background: "radial-gradient(circle, #e9d2a640 0%, #fbbf2430 30%, transparent 70%)",
+            animationDuration: "4s",
+          }}
+        />
+        <div
+          className="absolute bottom-32 left-10 w-[400px] h-[400px] rounded-full opacity-30 blur-3xl animate-pulse"
+          style={{
+            background: "radial-gradient(circle, #e9d2a630 0%, #f59e0b20 30%, transparent 70%)",
+            animationDuration: "6s",
+            animationDelay: "1s",
+          }}
+        />
       </div>
 
-      {/* CARROSSEL (menor, com mais tensão entre texto e imagem) */}
-      <div className="relative max-w-4xl mx-auto px-6 -mt-8">
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="text-center mb-12 space-y-3">
+          <p className="text-xs md:text-sm tracking-[0.22em] uppercase text-[#e9d2a6]">
+            Soluções completas para clínicas em diferentes momentos
+          </p>
 
-        <Card className="relative w-full max-w-4xl h-[420px] p-8 rounded-3xl bg-white border border-white/10 shadow-xl flex flex-row items-stretch justify-between gap-6">
-          {/* COLUNA ESQUERDA — conteúdo levemente deslocado para direita (pl-8) */}
-          <div className="w-1/2 p-6 pl-8 flex flex-col justify-start">
-            <h3 className="transform -translate-y-2 -ml-1 text-3xl font-extrabold text-[#e9d2a6] mb-4">
-              {slides[current].title}
-            </h3>
+          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-sm">
+            Temos uma solução para cada necessidade da sua clínica.
+          </h1>
 
-            <p className="text-black font-extrabold text-base mb-4 max-w-md">
-              {slides[current].subtitle}
-            </p>
+          <p className="text-lg md:text-xl text-white/80 mt-4 max-w-2xl md:max-w-3xl mx-auto">
+            Do primeiro anúncio à organização do atendimento e do comercial,
+            combinamos diferentes serviços para montar um plano sob medida para o seu contexto.
+          </p>
+        </div>
 
-            <ul className="space-y-3 text-black/80 text-left max-w-md pl-3 border-l-4 border-black/10">
-              {slides[current].points && slides[current].points.length > 0 ? (
-                slides[current].points.map((point, idx) => (
-                  <li key={idx} className="leading-relaxed text-base">
-                    • {point}
-                  </li>
-                ))
-              ) : (
-                <li className="leading-relaxed text-base">
-                  • Acompanhamento diário com feedbacks e relatórios
+        {/* Carrossel */}
+        <div className="relative bg-black rounded-3xl p-6 md:p-8 border border-amber-200/30 max-w-3xl mx-auto">
+
+          {/* MOBILE */}
+          <div className="md:hidden space-y-4 text-white">
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+              style={{ backgroundColor: "#ffffff20" }}
+            >
+              {slides[current].icon}
+            </div>
+
+            <h3 className="text-2xl font-bold">{slides[current].title}</h3>
+            <p className="text-sm text-white/80">{slides[current].subtitle}</p>
+
+            <div className="relative h-48 rounded-2xl overflow-hidden ring-1 ring-amber-200/30">
+              <img src={slides[current].image} alt="" className="w-full h-full object-cover" />
+            </div>
+
+            <ul className="space-y-2 px-2">
+              {slides[current].points.map((point, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full mt-1.5 bg-[#e9d2a6]" />
+                  <span className="text-xs text-white/90">{point}</span>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
 
-          {/* COLUNA DIREITA: imagem ligeiramente maior e mais próxima (cria tensão) */}
-          <div className="w-1/2 flex items-center justify-center">
-            {/* Usa a imagem do slide se existir; caso contrário, mantém placeholder */}
-            {slides[current].image ? (
-              <img
-                src={slides[current].image}
-                alt={slides[current].title}
-                className="w-80 h-80 object-cover rounded-xl border border-black/5"
-              />
-            ) : (
-              <div className="w-80 h-80 bg-gray-100 rounded-xl border border-black/5 flex items-center justify-center">
-                <span className="text-black/40">Imagem do tópico</span>
+          {/* DESKTOP */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 items-center text-white">
+            <div className="space-y-4">
+              <div
+                className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl"
+                style={{ backgroundColor: "#ffffff20" }}
+              >
+                {slides[current].icon}
               </div>
-            )}
+
+              <h3 className="text-2xl md:text-3xl font-bold">{slides[current].title}</h3>
+              <p className="text-base text-white/80">{slides[current].subtitle}</p>
+
+              <ul className="space-y-3">
+                {slides[current].points.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <span className="w-2 h-2 rounded-full mt-1.5 bg-[#e9d2a6]" />
+                    <span className="text-sm text-white/90">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative h-[320px] rounded-2xl overflow-hidden ring-1 ring-amber-200/30">
+              <img src={slides[current].image} alt="" className="w-full h-full object-cover" />
+            </div>
           </div>
-        </Card>
 
-        {/* SETAS — recuadas um pouco para dentro */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-6 top-1/2 -translate-y-1/2 bg-[#e9d2a6]/10 hover:bg-[#e9d2a6]/20 p-3 rounded-full border border-white/10 z-10"
-          aria-label="Anterior"
-        >
-          <ChevronLeft className="text-[#e9d2a6]" size={26} />
-        </button>
+          {/* Botões */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-[-10px] md:left-[-20px] top-1/2 -translate-y-1/2 
+                      w-10 h-10 md:w-12 md:h-12 text-white hover:bg-transparent"
+            onClick={prevSlide}
+          >
+            <ChevronLeft className="!w-10 !h-10 text-white" />
+          </Button>
 
-        <button
-          onClick={nextSlide}
-          className="absolute right-6 top-1/2 -translate-y-1/2 bg-[#e9d2a6]/10 hover:bg-[#e9d2a6]/20 p-3 rounded-full border border-white/10 z-10"
-          aria-label="Próximo"
-        >
-          <ChevronRight className="text-[#e9d2a6]" size={26} />
-        </button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-[-10px] md:right-[-20px] top-1/2 -translate-y-1/2 
+                      w-10 h-10 md:w-12 md:h-12 text-white hover:bg-transparent"
+            onClick={nextSlide}
+          >
+            <ChevronRight className="!w-10 !h-10 text-white" />
+          </Button>
+
+          {/* Indicadores (sem frase) */}
+          <div className="flex flex-col items-center gap-3 mt-8 text-white">
+            <div className="flex justify-center gap-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrent(index)}
+                  className={`${current === index ? "w-8" : "w-2 bg-gray-600 hover:bg-gray-500"} h-2 rounded-full transition-all`}
+                  style={current === index ? { backgroundColor: "#e9d2a6" } : {}}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* FRASE FORA DO CARROSSEL */}
+        <p className="text-base md:text-lg text-white/80 text-center max-w-xl mx-auto mt-10 mb-4">
+          Atendemos desde clínicas que estão começando até redes consolidadas.
+          Selecionamos as soluções certas para a realidade da sua clínica.
+        </p>
+
+        {/* CTA FINAL */}
+        <div className="w-full flex justify-center mt-4 mb-20">
+          <a
+            href="https://wa.me/5511999999999?text=Olá! Quero entender qual solução da Belmond faz mais sentido para a minha clínica."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-6 py-3 rounded-lg font-semibold transition"
+          >
+            Agende uma conversa e descubra seu melhor plano
+          </a>
+        </div>
+
       </div>
-
-      {/* INDICADORES (pontinhos estilo Instagram) */}
-      <div className="flex justify-center mt-6 space-x-2">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`rounded-full transition-all duration-300 ${
-              current === idx ? "bg-[#e9d2a6] w-6 h-3 rounded-full" : "bg-white/30 w-3 h-3"
-            }`}
-            aria-label={`Ir para slide ${idx + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* CTA BUTTON — cor reforçada */}
-     <div className="w-full flex justify-center mt-8 mb-20 relative z-10">
-      <a
-        href="https://wa.me/5511999999999?text=Olá! Quero saber mais." 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-6 py-3 rounded-lg font-semibold transition shadow-lg"
-      >
-        Agende sua reunião agora
-      </a>
-    </div>
-
     </section>
   )
 }
