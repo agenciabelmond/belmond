@@ -50,12 +50,12 @@ export default function App() {
               </div>
 
               {/* Título Montserrat */}
-              <h1
-                className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
-              >
-                Impulsione os Resultados da Sua Clínica
-              </h1>
+            <h1
+              className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
+              Impulsione os Resultados da Sua Clínica
+            </h1>
 
               <p className="text-white text-lg mb-6 leading-relaxed">
                 Na Belmond, ajudamos clínicas a crescer de forma consistente e lucrativa. Unimos criatividade, dados e estratégias inteligentes para atrair mais pacientes e aumentar seu faturamento.
