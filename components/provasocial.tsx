@@ -91,17 +91,6 @@ export function SocialProofSection() {
             </div>
             </div>
 
-
-              <div className="mt-6 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-[#e9d2a6]" fill="#e9d2a6" />
-                  ))}
-                </div>
-
-                <h3 className="font-bold text-xl mb-2 text-white">Dra. Mariana Costa</h3>
-                <p className="text-sm text-white/70">Clínica de Estética Avançada</p>
-              </div>
             </div>
 
           </div>
