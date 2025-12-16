@@ -12,9 +12,9 @@ export function Results() {
       subtitle:
         "Acompanhamento diário da equipe comercial da clínica com feedbacks, relatórios detalhados e planos de ação contínuos para maximizar resultados.",
       points: [
-        "Condução inteligente da conversa em todos os canais",
-        "Estrutura completa de vendas, especialmente pensada para clínicas.",
-        "Mais de 40 scripts validados e adaptáveis ao seu time",
+        "Roteiros de atendimento e vendas aplicados à rotina da secretária e da CRC.",
+        "Processo claro de abordagem, qualificação, objeções e fechamento de agenda.",
+        "Cobrança, correção e acompanhamento contínuo para garantir execução do método.",
       ],
       image: "/treinamento.png",
       icon: "📊",
@@ -37,7 +37,7 @@ export function Results() {
         "Conteúdos e anúncios feitos pelos copywriters e designers da Belmond, pensando em conversão e relacionamento.",
       points: [
         "Mais foco em agendamento, não apenas em estética",
-        "Criados com base na experiência de mais de 100 clínicas",
+        "Criados com base na experiência de mais de 250 clínicas",
         "Produção contínua por um time em constante atualização",
       ],
       image: "/gestaomidiasocial.png",
@@ -48,7 +48,7 @@ export function Results() {
       subtitle:
         "Estruturamos, otimizamos e potencializamos o setor comercial da sua clínica para acompanhar o crescimento e gerar resultados consistentes.",
       points: [
-        "Montamos sua equipe comercial do zero ou reorganizamos estruturas existentes.",
+        "Estruturamos a equipe comercial da clínica para melhorar desempenho e conversão.",
         "Treinamos e desenvolvemos sua equipe de atendimento e vendas para máxima performance.",
         "Implementação de processos inteligentes e métricas para acompanhamento de resultados.",
       ],
@@ -101,16 +101,16 @@ export function Results() {
         Soluções completas para clínicas em diferentes momentos
       </p>
 
-      <h1
-        className="text-5xl md:text-5xl lg:text-6xl font-serif text-white text-center mb-10 text-balance"
-      >
-        Temos uma solução para cada necessidade da sua clínica.
-      </h1>
+        <h1
+          className="w-full max-w-7xl mx-auto text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-serif text-white text-center mb-10"
+        >
+          Soluções completas para clínicas que querem crescer com controle e conversão
+        </h1>
 
 
           <p className="text-lg md:text-xl text-white/80 mt-4 max-w-2xl md:max-w-3xl mx-auto">
-            Do primeiro anúncio à organização do atendimento e do comercial,
-            combinamos diferentes serviços para montar um plano sob medida para o seu contexto.
+           Acompanhamos diariamente a equipe comercial da clínica, analisando atendimentos reais, corrigindo abordagens 
+           e orientando ajustes práticos para aumentar a conversão e a consistência dos resultados.
           </p>
         </div>
 

@@ -13,33 +13,33 @@ export function ExclusivityBanner() {
           </div>
 
         <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">
-        Trabalhamos com <span className="text-[#F4D27A]">contrato de exclusividade</span> por região
+        Trabalhamos com <span className="text-[#F4D27A]">contrato de exclusividade</span> por região e especialidade
         </h2>
 
 
           <p className="text-xl text-white/80 mb-8">
-            Garantimos que você será o único cliente da sua região, sem concorrência direta.
-            Cada estratégia é personalizada para o seu mercado e público-alvo.
+            Garantimos exclusividade por região e especialidade, evitando concorrência direta entre clínicas do mesmo segmento. 
+            Cada estratégia é desenhada de forma personalizada para o seu mercado, especialidade e perfil de público.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
 
             <div className="p-6 rounded-2xl bg-black border border-[#F4D27A] shadow-[0_4px_20px_rgba(244,210,122,0.35)]">
               <MapPin className="w-8 h-8 text-[#F4D27A] mb-4 mx-auto" />
-              <h3 className="font-semibold mb-2 text-white">Exclusividade Regional</h3>
-              <p className="text-sm text-white/70">Apenas uma clínica por região atendida</p>
+              <h3 className="font-semibold mb-2 text-white">Exclusividade por Região e Especialidade </h3>
+              <p className="text-sm text-white/70">Atendemos apenas uma clínica por região e especialidade</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-black border border-[#F4D27A] shadow-[0_4px_20px_rgba(244,210,122,0.35)]">
               <Sparkles className="w-8 h-8 text-[#F4D27A] mb-4 mx-auto" />
               <h3 className="font-semibold mb-2 text-white">Estratégia Personalizada</h3>
-              <p className="text-sm text-white/70">Planejamento único para seu mercado</p>
+              <p className="text-sm text-white/70">Planejamento exclusivo especialmente para sua unidade</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-black border border-[#F4D27A] shadow-[0_4px_20px_rgba(244,210,122,0.35)]">
               <Shield className="w-8 h-8 text-[#F4D27A] mb-4 mx-auto" />
               <h3 className="font-semibold mb-2 text-white">Proteção Contratual</h3>
-              <p className="text-sm text-white/70">Garantia de não concorrência direta</p>
+              <p className="text-sm text-white/70">Exclusividade assegurada para sua clínica na mesma especialidade*</p>
             </div>
 
           </div>

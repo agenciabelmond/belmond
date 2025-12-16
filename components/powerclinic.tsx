@@ -1,6 +1,7 @@
 export function MethodologySection() {
   return (
-    <section className="relative bg-black text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative bg-[#0e0d0d] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+
 
       <div className="relative max-w-7xl mx-auto">
         <h2
@@ -10,7 +11,7 @@ export function MethodologySection() {
         </h2>
 
         <p className="text-center text-white/80 text-lg mb-16 max-w-5xl mx-auto leading-relaxed">
-          O <span className="text-[#e9d2a6] font-semibold">Método PowerClinic</span> combina captação e qualificação em um único sistema integrado, transformando sua clínica em uma máquina de conversão. Acompanhamos toda a jornada do paciente, da captação ao pós-atendimento, para manter o vínculo ativo e potencializar seus resultados.
+          O <span className="text-[#e9d2a6] font-semibold">Método PowerClinic</span>  integra captação, atendimento e conversão em um único sistema que transforma sua clínica em uma máquina de agendamentos. Acompanhamos toda a jornada do paciente do primeiro contato ao pós-atendimento garantindo crescimento previsível e constante.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -22,7 +23,7 @@ export function MethodologySection() {
           >
             <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Monitoramento Completo</h3>
             <p className="text-sm leading-relaxed text-white/90">
-              Monitoramento completo: acompanhamos o atendimento, sugerimos melhorias, corrigimos divergências e realizamos cobranças ativas para resultados mais ágeis.
+              Acompanhamos os atendimentos da secretária na prática, analisamos como o paciente é conduzido em cada conversa e identificamos oportunidades de melhoria para elevar a conversão e o padrão do atendimento da clínica.
             </p>
           </div>
 
@@ -34,7 +35,7 @@ export function MethodologySection() {
           >
             <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Treinamento da Equipe</h3>
             <p className="text-sm leading-relaxed text-white/90">
-              Capacitação completa da equipe comercial com treinamentos, simulações e técnicas de atendimento, conversão e relacionamento com o paciente.
+              Treinamos sua secretária e CRC para saber como encantar o paciente e converter até 3x mais, utilizando técnicas avançadas de vendas que transformam conversas em agendamentos.
             </p>
           </div>
 
@@ -44,7 +45,7 @@ export function MethodologySection() {
               boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
             }}
           >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Estratégias de Indicação</h3>
+            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Programas de Indicação</h3>
             <p className="text-sm leading-relaxed text-white/90">
               Estratégias de indicação e retenção para fidelizar pacientes, fortalecer relacionamentos e garantir fluxo constante na clínica.
             </p>

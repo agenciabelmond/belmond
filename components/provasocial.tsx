@@ -17,13 +17,13 @@ export function SocialProofSection() {
               <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light tracking-wide">
                 Nossa abordagem exclusiva integra o{" "}
                 <span className="text-[#e9d2a6] font-medium border-b border-[#e9d2a6]/30">
-                  Método Power Clinic
+                  Método PowerClinic
                 </span>{" "}
                 ao treinamento estratégico de equipes, criando um ecossistema completo de crescimento.
               </p>
 
               <p className="text-base md:text-lg text-white/70 leading-relaxed mt-4 font-light">
-                A <span className="text-[#e9d2a6] font-medium">Belmond</span> não apenas desenvolve campanhas de marketing — 
+                A <span className="text-[#e9d2a6] font-medium">Belmond</span> não apenas desenvolve campanhas de marketing,
                 transformamos clínicas em autoridades de mercado, estabelecendo sistemas consistentes de aquisição e conversão 
                 de pacientes qualificados.
               </p>
@@ -98,7 +98,7 @@ export function SocialProofSection() {
             <div className="inline-block p-10 rounded-2xl bg-black border-2 border-[#e9d2a6]/40 shadow-[0_0_50px_rgba(233,210,166,0.15)]">
                 <p className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Junte-se a{" "}
-                <span className="text-[#e9d2a6] text-3xl md:text-4xl">mais de 150 clientes satisfeitos</span>
+                <span className="text-[#e9d2a6] text-3xl md:text-4xl">mais de 250 clientes satisfeitos</span>
                 </p>
                 <p className="text-white/80 text-lg max-w-2xl">
                 que transformaram suas clínicas em referências no mercado com a{" "}
