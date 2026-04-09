@@ -9,7 +9,7 @@ import { Header } from "@/components/header"
 import { Botao } from "@/components/botao"   // <-- AQUI
 import { SocialProofSection } from "@/components/provasocial"
 import { MethodologySection } from "@/components/powerclinic"
-
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
@@ -18,11 +18,12 @@ export default function Home() {
       <Hero />
       <MethodologySection />
       <Results />
-      <App />
       <ExclusivityBanner />
       <SocialProofSection />
       <FaqSection />
       <CTA />
+      <Footer/>
+
 
       {/* BOTÃO FIXO DE WHATSAPP */}
       <Botao />   {/* <-- AQUI */}
