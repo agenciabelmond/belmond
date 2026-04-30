@@ -6,8 +6,7 @@ import { VideoTestimonials } from "@/components/video-testimonials"
 import { ExclusivityBanner } from "@/components/exclusivity-banner"
 import { CTA } from "@/components/cta"
 import { Header } from "@/components/header"
-import { Botao } from "@/components/botao"   // <-- AQUI
-import { SocialProofSection } from "@/components/provasocial"
+import { Testimonials } from "@/components/testimonials"
 import { MethodologySection } from "@/components/powerclinic"
 import { Footer } from "@/components/footer"
 
@@ -19,14 +18,13 @@ export default function Home() {
       <MethodologySection />
       <Results />
       <ExclusivityBanner />
-      <SocialProofSection />
+      <Testimonials />
       <FaqSection />
       <CTA />
       <Footer/>
 
 
-      {/* BOTÃO FIXO DE WHATSAPP */}
-      <Botao />   {/* <-- AQUI */}
+
     </main>
   )
 }

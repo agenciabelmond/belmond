@@ -1,92 +1,140 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { 
+  Users, 
+  Target, 
+  Trophy, 
+  BarChart3, 
+  Repeat, 
+  ShieldCheck 
+} from "lucide-react"
+
+const features = [
+  {
+    title: "Monitoramento Completo",
+    description: "Acompanhamos os atendimentos da secretária na prática, analisando cada conversa para elevar o padrão da clínica.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Treinamento da Equipe",
+    description: "Treinamos sua secretária e CRC para encantar o paciente e converter até 3x mais com técnicas avançadas.",
+    icon: Users,
+  },
+  {
+    title: "Programas de Indicação",
+    description: "Estratégias de fidelização e retenção para garantir que seu paciente se torne um promotor da sua marca.",
+    icon: Repeat,
+  },
+  {
+    title: "Funil de Qualificação",
+    description: "Estrutura completa para qualificar leads e maximizar conversões com abordagens personalizadas.",
+    icon: Target,
+  },
+  {
+    title: "Análise de Performance",
+    description: "Métricas essenciais de captação e satisfação para otimizar resultados baseados em dados reais.",
+    icon: BarChart3,
+  },
+  {
+    title: "Acompanhamento Contínuo",
+    description: "Suporte estratégico e revisões periódicas para garantir que o crescimento nunca estagne.",
+    icon: Trophy,
+  }
+]
+
+// Variantes para animação de entrada em cascata (stagger)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+}
+
 export function MethodologySection() {
   return (
-    <section className="relative bg-[#0e0d0d] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
-
+    <section className="relative bg-[#050505] text-white py-24 px-6 overflow-hidden">
+      
+      {/* Detalhes de fundo (Glows sutis) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#C6A75E]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto">
-        <h2
-          className="text-5xl md:text-5xl lg:text-6xl font-serif text-white text-center mb-10 text-balance -mt-16"
-        >
-          Entenda o PowerClinic
-        </h2>
-
-        <p className="text-center text-white/80 text-lg mb-16 max-w-5xl mx-auto leading-relaxed">
-          O <span className="text-[#e9d2a6] font-semibold">Método PowerClinic</span>  integra captação, atendimento e conversão em um único sistema que transforma sua clínica em uma máquina de agendamentos. Acompanhamos toda a jornada do paciente do primeiro contato ao pós-atendimento garantindo crescimento previsível e constante.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            className="bg-black text-white p-6 rounded-lg border border-[#e9d2a6]"
-            style={{
-              boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
-            }}
+        
+        {/* Header da Seção */}
+        <div className="text-center mb-20 space-y-4">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-[#C6A75E] text-[10px] tracking-[0.4em] uppercase font-bold"
           >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Monitoramento Completo</h3>
-            <p className="text-sm leading-relaxed text-white/90">
-              Acompanhamos os atendimentos da secretária na prática, analisamos como o paciente é conduzido em cada conversa e identificamos oportunidades de melhoria para elevar a conversão e o padrão do atendimento da clínica.
-            </p>
-          </div>
-
-          <div
-            className="bg-black text-white p-6 rounded-lg border border-[#e9d2a6]"
-            style={{
-              boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
-            }}
+            Metodologia Exclusiva
+          </motion.span>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-serif text-white tracking-tight"
           >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Treinamento da Equipe</h3>
-            <p className="text-sm leading-relaxed text-white/90">
-              Treinamos sua secretária e CRC para saber como encantar o paciente e converter até 3x mais, utilizando técnicas avançadas de vendas que transformam conversas em agendamentos.
-            </p>
-          </div>
+            Entenda o <span className="italic font-normal">PowerClinic</span>
+          </motion.h2>
 
-          <div
-            className="bg-black text-white p-6 rounded-lg border border-[#e9d2a6]"
-            style={{
-              boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
-            }}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-white/50 text-base md:text-lg max-w-3xl mx-auto leading-relaxed font-light"
           >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Programas de Indicação</h3>
-            <p className="text-sm leading-relaxed text-white/90">
-              Estratégias de indicação e retenção para fidelizar pacientes, fortalecer relacionamentos e garantir fluxo constante na clínica.
-            </p>
-          </div>
-
-          <div
-            className="bg-black text-white p-6 rounded-lg border border-[#e9d2a6]"
-            style={{
-              boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
-            }}
-          >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Funil de Qualificação</h3>
-            <p className="text-sm leading-relaxed text-white/90">
-              Funil de vendas estruturado para qualificar leads, acompanhar oportunidades e maximizar conversões com abordagem personalizada.
-            </p>
-          </div>
-
-          <div
-            className="bg-black text-white p-6 rounded-lg border border-[#e9d2a6]"
-            style={{
-              boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
-            }}
-          >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Análise de Performance</h3>
-            <p className="text-sm leading-relaxed text-white/90">
-              Monitoramos métricas essenciais da sua clínica, acompanhando captação, conversão e satisfação dos pacientes para otimizar resultados e ajustar estratégias.
-            </p>
-          </div>
-
-          <div
-            className="bg-black text-white p-6 rounded-lg border border-[#e9d2a6]"
-            style={{
-              boxShadow: "0 0 8px rgba(233, 210, 166, 0.2), 0 0 15px rgba(233, 210, 166, 0.08)",
-            }}
-          >
-            <h3 className="text-xl font-semibold mb-3 text-[#e9d2a6]">Acompanhamento Contínuo</h3>
-            <p className="text-sm leading-relaxed text-white/90">
-              Oferecemos suporte contínuo, revisões periódicas e orientação estratégica para otimizar processos e maximizar resultados.
-            </p>
-          </div>
+            Integramos captação, atendimento e conversão em um sistema que transforma sua clínica em uma 
+            <span className="text-white font-medium"> máquina de agendamentos premium.</span>
+          </motion.p>
         </div>
+
+        {/* Grid de Cards */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {features.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              className="group relative p-8 rounded-3xl bg-white/[0.02] border border-white/10 overflow-hidden transition-all duration-500 hover:bg-white/[0.04] hover:border-[#C6A75E]/40"
+            >
+              {/* Efeito de brilho no hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C6A75E]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-[#C6A75E]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <item.icon className="w-6 h-6 text-[#C6A75E]" />
+                </div>
+                
+                <h3 className="text-xl font-medium mb-3 text-white group-hover:text-[#E7D3A1] transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-sm leading-relaxed text-white/40 group-hover:text-white/60 transition-colors">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Detalhe visual discreto no canto */}
+              <div className="absolute bottom-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <div className="text-4xl font-serif italic text-white">{index + 1}</div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

@@ -2,47 +2,55 @@ import { Shield, MapPin, Sparkles } from "lucide-react";
 
 export function ExclusivityBanner() {
   return (
-    <section className="pt-8 pb-16 bg-black relative overflow-hidden">
+    <section className="py-12 bg-[#080808] border-y border-white/5 relative overflow-hidden">
+      {/* Glow de fundo sutil para não ficar chapado */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-full bg-[#F4D27A]/5 blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
+          
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+            <div className="flex-1 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4D27A]/10 border border-[#F4D27A]/20 mb-4">
+                <Shield className="w-3.5 h-3.5 text-[#F4D27A]" />
+                <span className="text-[10px] uppercase tracking-widest font-bold text-[#F4D27A]">Exclusividade</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">
+                Um único parceiro por <span className="text-[#F4D27A]">região</span>
+              </h2>
+              <p className="text-zinc-400 text-sm md:text-base max-w-xl">
+                Garantimos proteção contratual para que sua clínica seja a única do segmento a utilizar nossa metodologia na sua localidade.
+              </p>
+            </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F4D27A]/10 border border-[#F4D27A] mb-6">
-            <Shield className="w-4 h-4 text-[#F4D27A]" />
-            <span className="text-sm font-medium text-white">Exclusividade Garantida</span>
+            <div className="hidden md:block w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+
+            <div className="flex-1 grid grid-cols-1 gap-4 w-full">
+              {/* Item 1 */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#F4D27A]/30 transition-colors">
+                <div className="mt-1 bg-[#F4D27A]/10 p-2 rounded-lg text-[#F4D27A]">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">Raio de Atuação Protegido</h3>
+                  <p className="text-zinc-500 text-xs">Sem concorrência direta na mesma especialidade.</p>
+                </div>
+              </div>
+
+              {/* Item 2 */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#F4D27A]/30 transition-colors">
+                <div className="mt-1 bg-[#F4D27A]/10 p-2 rounded-lg text-[#F4D27A]">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium text-sm">Personalização Total</h3>
+                  <p className="text-zinc-500 text-xs">Estratégias exclusivas para o seu perfil de público.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-        <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">
-        Trabalhamos com <span className="text-[#F4D27A]">contrato de exclusividade</span> por região e especialidade
-        </h2>
-
-
-          <p className="text-xl text-white/80 mb-8">
-            Garantimos exclusividade por região e especialidade, evitando concorrência direta entre clínicas do mesmo segmento. 
-            Cada estratégia é desenhada de forma personalizada para o seu mercado, especialidade e perfil de público.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-
-            <div className="p-6 rounded-2xl bg-black border border-[#F4D27A] shadow-[0_4px_20px_rgba(244,210,122,0.35)]">
-              <MapPin className="w-8 h-8 text-[#F4D27A] mb-4 mx-auto" />
-              <h3 className="font-semibold mb-2 text-white">Exclusividade por Região e Especialidade </h3>
-              <p className="text-sm text-white/70">Atendemos apenas uma clínica por região e especialidade</p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-black border border-[#F4D27A] shadow-[0_4px_20px_rgba(244,210,122,0.35)]">
-              <Sparkles className="w-8 h-8 text-[#F4D27A] mb-4 mx-auto" />
-              <h3 className="font-semibold mb-2 text-white">Estratégia Personalizada</h3>
-              <p className="text-sm text-white/70">Planejamento exclusivo especialmente para sua unidade</p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-black border border-[#F4D27A] shadow-[0_4px_20px_rgba(244,210,122,0.35)]">
-              <Shield className="w-8 h-8 text-[#F4D27A] mb-4 mx-auto" />
-              <h3 className="font-semibold mb-2 text-white">Proteção Contratual</h3>
-              <p className="text-sm text-white/70">Exclusividade assegurada para sua clínica na mesma especialidade*</p>
-            </div>
-
-          </div>
+  
         </div>
       </div>
     </section>
