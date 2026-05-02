@@ -1,66 +1,63 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export function CTA() {
   return (
-    <section className="relative py-32 bg-black">
+    <section id="contato" className="relative bg-black py-24 md:py-32">
       <div className="container mx-auto px-4">
-        <div
-          className="
-            relative max-w-6xl mx-auto rounded-xl overflow-hidden
-            shadow-[0_0_45px_4px_rgba(0,0,0,0.55)]
-          "
-        >
-
-          {/* Vídeo substituindo a imagem */}
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+          {/* Background Video */}
           <video
-            src="/prediovideo.mp4"   // coloque aqui o caminho do seu vídeo
+            src="/prediovideo.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-[580px] object-cover object-center"
+            preload="auto"
+            className="h-[500px] md:h-[580px] w-full object-cover object-center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20" />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 space-y-8">
-        <h2
-          className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight"
-          style={{
-            textShadow: "2px 2px 6px rgba(0, 0, 0, 0.5)",
-          }}
-        >
-          Pronto para levar sua clínica <span className="text-accent">às alturas?</span>
-        </h2>
+          {/* Main Content */}
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="max-w-4xl text-center">
+              <h2
+                className="mb-6 text-3xl font-serif leading-tight text-white md:text-5xl lg:text-6xl"
+                style={{
+                  textShadow: "0 4px 20px rgba(0,0,0,0.45)",
+                }}
+              >
+                Pronto para levar sua clínica{" "}
+                <span className="text-accent">às alturas?</span>
+              </h2>
 
+              <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-white/85 md:text-xl">
+                Fale com nossa equipe agora mesmo e agende uma reunião
+                estratégica para descobrir como podemos gerar mais pacientes
+                e escalar sua clínica odontológica.
+              </p>
 
-                      <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Selecione um de nossos planos e experiencie o poder de tráfego qualificado, gestão organizada e equipe
-              profissional especializada em clínicas odontológicas.
-            </p>
-            <Button
-              size="lg"
-              className="
-                relative 
-                bg-black text-white
-                text-lg px-12 py-7 font-extrabold 
-                rounded-xl
-                border border-white
-                shadow-[0_0_15px_rgba(255,255,255,0.6)]
-                transition-transform duration-300
-                hover:scale-105
-              "
-            >
-              <span className="relative flex items-center">
-                AGENDAR REUNIÃO
-                <ArrowRight className="ml-3 w-6 h-6" />
-              </span>
-            </Button>
-
-
+              <Link
+                href="https://wa.me/555391685956?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="group h-auto rounded-xl bg-white px-10 py-6 text-base font-bold text-black transition-all duration-300 hover:scale-105 hover:bg-white/90"
+                >
+                  <span className="flex items-center gap-3">
+                    AGENDAR REUNIÃO NO WHATSAPP
+                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -1,29 +1,63 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
-  title: 'Belmond',
-  description: 'Agência de Marketing Digital',
-  generator: 'v0.app',
+  title: {
+    default: "Belmond",
+    template: "%s | Belmond",
+  },
+  description: "Agência de Marketing Digital especializada em performance e branding.",
+  keywords: [
+    "marketing digital",
+    "branding",
+    "tráfego pago",
+    "social media",
+    "Belmond",
+  ],
+  authors: [{ name: "Belmond" }],
+  creator: "Belmond",
+  
+  // Logo/Favicon da aba
+  icons: {
+    icon: "/logo-belmond.png",
+    shortcut: "/logo-belmond.png",
+    apple: "/logo-belmond.png",
+  },
+
+  metadataBase: new URL("https://agenciabelmond.com.br"),
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          font-sans antialiased bg-white text-black
+        `}
+      >
         {children}
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

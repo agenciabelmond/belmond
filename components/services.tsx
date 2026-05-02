@@ -1,121 +1,128 @@
-import { Card } from "@/components/ui/card";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+"use client"
 
-export function Services() {
-  const services = [
-    {
-      tag: "Aquisição",
-      title: "Previsibilidade de pacientes todos os dias",
-      highlight: "Crescimento com controle e escala",
-      description:
-        "Estruturamos aquisição de pacientes com foco em consistência e previsibilidade, eliminando sazonalidade.",
-      points: [
-        "Geração contínua de demanda qualificada",
-        "Otimização de custo por aquisição (CAC)",
-        "Escala validada com performance real",
-      ],
-    },
-    {
-      tag: "Conversão",
-      title: "Transforme atendimento em vendas",
-      highlight: "Mais consultas sem aumentar tráfego",
-      description:
-        "Otimizamos o processo de atendimento para aumentar drasticamente a taxa de conversão de leads em consultas.",
-      points: [
-        "Scripts de atendimento de alta performance",
-        "Redução de perdas no funil",
-        "Aumento de comparecimento em consultas",
-      ],
-    },
-    {
-      tag: "Automação",
-      title: "Operação inteligente e escalável",
-      highlight: "Seu sistema trabalha por você",
-      description:
-        "Automatizamos follow-ups e qualificação de leads para manter sua operação fluindo 24/7.",
-      points: [
-        "Follow-up automático multicanal",
-        "Integração com CRM e WhatsApp",
-        "Qualificação inteligente de leads",
-      ],
-    },
-  ];
+import { useMemo } from "react"
+import { Card } from "@/components/ui/card"
+import { ArrowUpRight, CheckCircle2 } from "lucide-react"
+import { motion } from "framer-motion"
+
+const SERVICES = [
+  {
+    tag: "Aquisição",
+    title: "Previsibilidade de pacientes todos os dias",
+    highlight: "Crescimento com controle e escala",
+    description:
+      "Estruturamos a aquisição de pacientes com foco em previsibilidade, eliminando sazonalidade e criando um fluxo constante de oportunidades.",
+    points: [
+      "Geração contínua de demanda qualificada",
+      "Otimização de custo por aquisição (CAC)",
+      "Escala sustentada com dados reais",
+    ],
+  },
+  {
+    tag: "Conversão",
+    title: "Transforme atendimento em faturamento",
+    highlight: "Mais consultas com o mesmo tráfego",
+    description:
+      "Refinamos cada etapa do atendimento para aumentar a conversão de leads em pacientes efetivos.",
+    points: [
+      "Scripts comerciais validados",
+      "Redução de perdas no funil",
+      "Aumento de comparecimento e fechamento",
+    ],
+  },
+  {
+    tag: "Automação",
+    title: "Operação inteligente e escalável",
+    highlight: "Seu sistema continua vendendo",
+    description:
+      "Automatizamos follow-ups, relacionamento e qualificação para manter sua operação performando 24/7.",
+    points: [
+      "Follow-up multicanal automatizado",
+      "Integração com CRM e WhatsApp",
+      "Qualificação inteligente de oportunidades",
+    ],
+  },
+]
+
+export default function Services() {
+  const cards = useMemo(() => SERVICES, [])
 
   return (
-    <section className="relative py-28 bg-gradient-to-b from-white via-neutral-50 to-white overflow-hidden">
-      {/* background glow */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute -top-40 left-1/2 w-[600px] h-[600px] -translate-x-1/2 bg-[#e9d2a6] blur-[120px] rounded-full" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-neutral-50 to-white py-28">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#e9d2a6]/20 blur-[120px]" />
       </div>
 
-      <div className="relative container mx-auto px-6 max-w-6xl">
-        {/* HEADER */}
-        <div className="mb-20 text-center space-y-6">
-          <span className="inline-flex items-center px-4 py-1 rounded-full bg-black/5 border border-black/10 text-[11px] tracking-[0.25em] uppercase font-semibold">
+      <div className="container relative z-10 mx-auto max-w-6xl px-6">
+        <header className="mx-auto mb-20 max-w-3xl text-center">
+          <span className="inline-flex rounded-full border border-black/10 bg-black/[0.03] px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-neutral-700">
             Soluções Estratégicas
           </span>
 
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-black leading-tight">
+          <h2 className="mt-6 text-4xl font-semibold tracking-tight text-black md:text-6xl">
             Crescimento estruturado
-            <span className="block text-neutral-400 italic font-serif">
+            <span className="mt-2 block font-serif italic text-neutral-400">
               para clínicas modernas
             </span>
           </h2>
 
-          <p className="text-neutral-500 max-w-2xl mx-auto text-lg">
-            Criamos um ecossistema completo de aquisição, conversão e automação para gerar previsibilidade real de faturamento.
+          <p className="mt-6 text-lg leading-relaxed text-neutral-500">
+            Um ecossistema completo de aquisição, conversão e automação para criar previsibilidade real de faturamento.
           </p>
-        </div>
+        </header>
 
-        {/* GRID */}
-        <div className="grid md:grid-cols-3 gap-10">
-          {services.map((s, i) => (
-            <Card
-              key={i}
-              className="relative group p-8 rounded-[28px] border border-neutral-100 bg-white/70 backdrop-blur-xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {cards.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.45 }}
             >
-              {/* top accent line */}
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#c5a87d] to-transparent opacity-0 group-hover:opacity-100 transition" />
+              <Card className="group relative h-full overflow-hidden rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-[#c5a87d] to-transparent opacity-0 transition group-hover:opacity-100" />
 
-              {/* header */}
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold">
-                  {s.tag}
-                </span>
-                <div className="p-2 rounded-full bg-neutral-100 group-hover:bg-black group-hover:text-white transition">
-                  <ArrowUpRight className="w-4 h-4" />
+                <div className="mb-8 flex items-center justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+                    {service.tag}
+                  </span>
+
+                  <div className="rounded-full bg-neutral-100 p-2 transition group-hover:bg-black group-hover:text-white">
+                    <ArrowUpRight className="h-4 w-4" />
+                  </div>
                 </div>
-              </div>
 
-              {/* title */}
-              <h3 className="text-xl font-semibold text-black mb-3">
-                {s.title}
-              </h3>
+                <h3 className="mb-3 text-xl font-semibold text-black leading-tight">
+                  {service.title}
+                </h3>
 
-              <p className="text-sm font-medium text-[#b89a6a] mb-4">
-                {s.highlight}
-              </p>
+                <p className="mb-4 text-sm font-medium text-[#b89a6a]">
+                  {service.highlight}
+                </p>
 
-              <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-                {s.description}
-              </p>
+                <p className="mb-8 text-sm leading-relaxed text-neutral-500">
+                  {service.description}
+                </p>
 
-              {/* points */}
-              <ul className="space-y-3">
-                {s.points.map((p, idx) => (
-                  <li key={idx} className="flex gap-2 text-sm text-neutral-600">
-                    <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#c5a87d]" />
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-4">
+                  {service.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 text-sm text-neutral-600"
+                    >
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#c5a87d]" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              {/* hover overlay */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-b from-transparent to-black/5 pointer-events-none" />
-            </Card>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent to-black/[0.02] opacity-0 transition group-hover:opacity-100" />
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
