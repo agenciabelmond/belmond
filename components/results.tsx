@@ -143,9 +143,27 @@ export default function Results() {
               className="grid min-h-[420px] cursor-grab active:cursor-grabbing lg:grid-cols-2"
             >
               <div className="flex flex-col justify-center p-8 md:p-12">
-                <span className="mb-6 w-fit rounded-full bg-[#e9d2a6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-black">
+                
+                <span className="mb-4 w-fit rounded-full bg-[#e9d2a6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-black">
                   {activeSlide.tag}
                 </span>
+
+                {/* 👇 INDICADOR MOBILE DE SWIPE */}
+                <div className="mb-3 flex items-center gap-2 text-xs text-white/40 md:hidden">
+                  <span>Arraste para o lado</span>
+
+                  <motion.div
+                    animate={{ x: [0, 6, 0] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 1.2,
+                      ease: "easeInOut",
+                    }}
+                    className="text-[#e9d2a6]"
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </motion.div>
+                </div>
 
                 <h3 className="mb-4 text-3xl font-semibold text-white">
                   {activeSlide.title}
