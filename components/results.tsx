@@ -82,11 +82,14 @@ export default function Results() {
   }
 
   return (
-    <section id="servicos" className="relative overflow-hidden bg-black py-24">
+    <section
+      id="servicos"
+      className="relative overflow-hidden bg-black py-16 md:py-20"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-[#e9d2a6]/5 via-transparent to-transparent" />
 
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
-        <header className="mb-14 text-center">
+        <header className="mb-10 text-center">
           <span className="text-xs font-medium uppercase tracking-[0.35em] text-[#e9d2a6]">
             Soluções Estratégicas
           </span>
@@ -96,15 +99,48 @@ export default function Results() {
           </h2>
         </header>
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-2xl backdrop-blur-xl">
+        {/* CARD */}
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-2xl backdrop-blur-xl">
+          
+          {/* NAVIGATION (desktop only) */}
+          <div className="pointer-events-none absolute left-0 right-0 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-between px-4 md:flex">
+            <button
+              onClick={() => navigate("prev")}
+              className="pointer-events-auto rounded-full border border-white/10 bg-black/40 p-3 text-white backdrop-blur-md transition hover:bg-white/10"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+
+            <button
+              onClick={() => navigate("next")}
+              className="pointer-events-auto rounded-full bg-[#e9d2a6] p-3 text-black transition hover:scale-105"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                const threshold = 80
+
+                if (info.offset.x < -threshold) {
+                  setCurrent((prev) => (prev + 1) % SLIDES.length)
+                }
+
+                if (info.offset.x > threshold) {
+                  setCurrent((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)
+                }
+              }}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.35 }}
-              className="grid min-h-[520px] lg:grid-cols-2"
+              className="grid min-h-[420px] cursor-grab active:cursor-grabbing lg:grid-cols-2"
             >
               <div className="flex flex-col justify-center p-8 md:p-12">
                 <span className="mb-6 w-fit rounded-full bg-[#e9d2a6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-black">
@@ -121,7 +157,10 @@ export default function Results() {
 
                 <ul className="space-y-4">
                   {activeSlide.points.map((point) => (
-                    <li key={point} className="flex items-center gap-3 text-neutral-300">
+                    <li
+                      key={point}
+                      className="flex items-center gap-3 text-neutral-300"
+                    >
                       <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#e9d2a6]/15">
                         <Check className="h-3 w-3 text-[#e9d2a6]" />
                       </div>
@@ -145,42 +184,27 @@ export default function Results() {
           </AnimatePresence>
         </div>
 
-        <div className="mt-8 flex items-center justify-between">
-          <div className="flex gap-2">
-            {SLIDES.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                className={`h-1 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "w-10 bg-[#e9d2a6]"
-                    : "w-3 bg-white/15 hover:bg-white/30"
-                }`}
-                aria-label={`Ir para slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          <div className="flex gap-3">
+        {/* DOTS */}
+        <div className="mt-6 flex items-center justify-center gap-2">
+          {SLIDES.map((_, index) => (
             <button
-              onClick={() => navigate("prev")}
-              className="rounded-full border border-white/10 p-3 text-white transition hover:bg-white/5"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-
-            <button
-              onClick={() => navigate("next")}
-              className="rounded-full bg-[#e9d2a6] p-3 text-black transition hover:scale-105"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`h-1 rounded-full transition-all duration-300 ${
+                current === index
+                  ? "w-10 bg-[#e9d2a6]"
+                  : "w-3 bg-white/15 hover:bg-white/30"
+              }`}
+              aria-label={`Ir para slide ${index + 1}`}
+            />
+          ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* CTA */}
+        <div className="mt-12 text-center">
           <p className="mx-auto max-w-2xl text-neutral-300">
-            Selecionamos as soluções certas para a realidade atual da sua clínica, desde a estrutura inicial até a escala comercial.
+            Selecionamos as soluções certas para a realidade atual da sua clínica,
+            desde a estrutura inicial até a escala comercial.
           </p>
 
           <a
