@@ -122,7 +122,7 @@ export function Hero() {
   className="group relative h-[52px] overflow-hidden rounded-full bg-gradient-to-r from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] px-8 text-[11px] font-bold uppercase tracking-[0.1em] text-black shadow-[0_0_50px_rgba(198,167,94,0.4)] transition-all duration-300 hover:scale-[1.03]"
 >
   <a
-    href="https://wa.me/55555391685956?text=Olá%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações."
+    href="https://wa.me/555391685956?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
     target="_blank"
     rel="noopener noreferrer"
   >
