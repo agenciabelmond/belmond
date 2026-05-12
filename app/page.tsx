@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import MethodologySection from "@/components/powerclinic"
+import { Metodo } from "@/components/powerclinic"
 import Results from "@/components/results"
 import { ExclusivityBanner } from "@/components/exclusivity-banner"
 import { Testimonials } from "@/components/testimonials"
@@ -14,7 +14,7 @@ export default function HomePage() {
       <Header />
       
       <Hero />
-      <MethodologySection />
+      <Metodo />
       <Results />
       <ExclusivityBanner />
       <Testimonials />

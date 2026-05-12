@@ -1,207 +1,151 @@
-"use client";
+import React from "react"
+import { Target, Megaphone, Users } from "lucide-react"
 
-import { motion } from "framer-motion";
-import {
-  Users,
-  Target,
-  Trophy,
-  BarChart3,
-  Repeat,
-  ShieldCheck,
-} from "lucide-react";
+const CARDS = [
+  {
+    num: "01",
+    icon: <Target className="h-5 w-5" />,
+    title: "Posicionamento",
+    desc:
+      "Construímos autoridade e presença digital para tornar sua clínica referência na mente dos pacientes.",
+    tags: ["Estratégia de conteúdo", "Branding", "Instagram"],
+  },
+  {
+    num: "02",
+    icon: <Megaphone className="h-5 w-5" />,
+    title: "Captação",
+    desc:
+      "Tráfego pago inteligente focado em gerar pacientes qualificados todos os dias para sua clínica.",
+    tags: ["Anúncios", "Funis", "Landing Pages"],
+  },
+  {
+    num: "03",
+    icon: <Users className="h-5 w-5" />,
+    title: "Treinamento CRC",
+    desc:
+      "Treinamento comercial e acompanhamento estratégico para transformar contatos em pacientes fidelizados.",
+    tags: ["Treinamento CRC", "Scripts", "Monitoramento"],
+  },
+]
 
-const features = [
-  {
-    number: "01",
-    title: "Monitoramento Completo",
-    description:
-      "Acompanhamos cada interação da sua equipe para identificar oportunidades de melhoria e elevar a experiência do paciente.",
-    icon: ShieldCheck,
-    tags: ["Escuta ativa", "Feedbacks", "Relatórios"],
-  },
-  {
-    number: "02",
-    title: "Treinamento Estratégico",
-    description:
-      "Capacitamos secretárias e equipes comerciais para gerar confiança, conexão e taxas de conversão superiores.",
-    icon: Users,
-    tags: ["CRC", "Scripts", "Conversão"],
-  },
-  {
-    number: "03",
-    title: "Programas de Fidelização",
-    description:
-      "Criamos estratégias de retenção que transformam pacientes satisfeitos em promotores ativos da sua clínica.",
-    icon: Repeat,
-    tags: ["Retenção", "Indicações", "Engajamento"],
-  },
-  {
-    number: "04",
-    title: "Funil de Qualificação",
-    description:
-      "Estruturamos processos inteligentes para qualificar leads e aumentar a previsibilidade das conversões.",
-    icon: Target,
-    tags: ["Funis", "Landing Pages", "Anúncios"],
-  },
-  {
-    number: "05",
-    title: "Performance Orientada por Dados",
-    description:
-      "Acompanhamos métricas críticas para otimizar aquisição, atendimento e crescimento sustentável.",
-    icon: BarChart3,
-    tags: ["Métricas", "Dashboards", "Análise"],
-  },
-  {
-    number: "06",
-    title: "Crescimento Contínuo",
-    description:
-      "Realizamos análises recorrentes e ajustes estratégicos para manter sua clínica em evolução constante.",
-    icon: Trophy,
-    tags: ["Estratégia", "Ajustes", "Escala"],
-  },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45 },
-  },
-};
-
-function Divider({ children }: { children: React.ReactNode }) {
+function CheckCircle() {
   return (
-    <div className="flex items-center justify-center gap-4 w-full">
-      <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#E4C978]/60" />
-
-      <span
-        className="text-[10px] font-bold tracking-[0.35em] text-[#E4C978] uppercase"
-        style={{ fontFamily: "'Lato', sans-serif" }}
-      >
-        {children}
-      </span>
-
-      <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#E4C978]/60" />
-    </div>
-  );
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      className="shrink-0"
+    >
+      <circle
+        cx="8"
+        cy="8"
+        r="7"
+        stroke="rgba(198,167,94,0.5)"
+        strokeWidth="1.2"
+      />
+      <path
+        d="M5 8.5l2 2 4-4"
+        stroke="#C6A75E"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
 }
 
-export default function MethodologySection() {
+export function Metodo() {
   return (
     <section
       id="metodo"
-      className="relative -mt-4 md:-mt-8 overflow-hidden bg-[#080808] px-6 py-16 text-white"
+      className="relative overflow-hidden bg-[#080808] px-5 py-[60px] sm:px-8 lg:px-12"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/3 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#E4C978]/5 blur-[130px]" />
-        <div className="absolute bottom-0 left-1/2 h-[180px] w-[500px] -translate-x-1/2 bg-[#EED48F]/6 blur-[80px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(198,167,94,0.10),transparent_60%)]" />
+
+      <div className="relative z-10 mb-4 flex items-center justify-center gap-3">
+        <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#C6A75E]" />
+        <span className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[#C6A75E]">
+          Metodologia Exclusiva
+        </span>
+        <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#C6A75E]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto mb-12 max-w-4xl space-y-4 text-center"
-        >
-          <Divider>Metodologia Exclusiva</Divider>
+      <h2
+        className="relative z-10 text-center text-[32px] font-bold leading-[1.05] tracking-[-0.02em] text-white sm:text-[42px]"
+        style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+      >
+        O MÉTODO <span className="text-[#C6A75E]">POWERCLINIC</span>
+      </h2>
 
-          <h2
-            className="text-3xl font-black leading-none tracking-tight md:text-5xl"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+      <p className="relative z-10 mx-auto mt-3 mb-10 max-w-[460px] text-center font-sans text-[14px] font-light leading-[1.6] text-white/60 sm:text-[15px]">
+        Unimos captação, atendimento e relacionamento em uma estrutura aplicada
+        para clínicas que querem{" "}
+        <span className="font-normal text-[#C6A75E]">
+          crescer de forma previsível.
+        </span>
+      </p>
+
+      <div className="relative z-10 mx-auto grid max-w-[1250px] grid-cols-1 gap-6 sm:grid-cols-3">
+        {CARDS.map((card) => (
+          <div
+            key={card.num}
+            className="
+              group relative overflow-hidden rounded-2xl
+              border border-[#C6A75E]/12
+              bg-[#0F0F0F]
+              p-8
+              min-h-[340px]
+              transition-all duration-500
+              hover:-translate-y-2
+              hover:border-[#C6A75E]/30
+              hover:shadow-[0_0_40px_rgba(198,167,94,0.08)]
+            "
           >
-            O MÉTODO <span className="text-[#E4C978]">POWERCLINIC</span>
-          </h2>
+            <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_top,rgba(198,167,94,0.06),transparent_55%)]" />
 
-          <p
-            className="text-sm leading-relaxed text-zinc-400 md:text-base"
-            style={{ fontFamily: "'Lato', sans-serif" }}
-          >
-            Integramos aquisição, atendimento e conversão em um sistema
-            estruturado que posiciona sua clínica como referência e gera{' '}
-            <span className="font-semibold text-[#E4C978]">
-              crescimento previsível.
-            </span>
-          </p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {features.map(({ number, title, description, icon: Icon, tags }) => (
-            <motion.div
-              key={title}
-              variants={itemVariants}
-              whileHover={{ y: -6, scale: 1.015 }}
-              transition={{ duration: 0.35 }}
-              className="group relative flex flex-col overflow-hidden rounded-2xl p-[1px]"
-            >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#F8E7A1]/40 via-[#E4C978]/15 to-transparent opacity-80 transition-all duration-500 group-hover:opacity-100" />
-
-              <div
-                className="relative z-10 flex h-full flex-col rounded-2xl border border-white/5 bg-gradient-to-b from-[#131313] to-[#0A0A0A] p-5 backdrop-blur-xl"
-                style={{
-                  boxShadow:
-                    '0 8px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.04)',
-                }}
+            <div className="relative z-10 mb-6 flex items-start justify-between">
+              <span
+                className="text-[40px] leading-none text-[#C6A75E]/40"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#E4C978]/[0.07] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                {card.num}
+              </span>
 
-                <div className="relative z-10 flex h-full flex-col">
-                  <div className="mb-4 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl font-semibold text-[#F4DE93]/80">
-                        {number}
-                      </span>
-
-                      <div className="h-px w-8 bg-gradient-to-r from-[#E4C978] to-transparent" />
-                    </div>
-
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E4C978]/20 bg-[#E4C978]/10 shadow-[0_0_20px_rgba(228,201,120,0.08)] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#E4C978]/15">
-                      <Icon className="h-4 w-4 text-[#F8E7A1]" />
-                    </div>
-                  </div>
-
-                  <h3 className="mb-3 text-base font-black tracking-[0.08em] text-white transition-colors group-hover:text-[#F8E7A1]">
-                    {title.toUpperCase()}
-                  </h3>
-
-                  <div className="mb-4 h-px w-full bg-gradient-to-r from-[#E4C978]/30 via-[#E4C978]/10 to-transparent" />
-
-                  <p className="mb-5 flex-1 text-sm leading-relaxed text-zinc-400 transition-colors group-hover:text-zinc-300">
-                    {description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-[#E4C978]/15 bg-[#E4C978]/5 px-3 py-1 text-[11px] tracking-wide text-[#D8C27A]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#C6A75E]/20 text-[#C6A75E] transition-all duration-500 group-hover:scale-110">
+                {card.icon}
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            </div>
+
+            <h3 className="relative z-10 mb-3 font-sans text-[15px] font-semibold uppercase tracking-[0.16em] text-white">
+              {card.title}
+            </h3>
+
+            <p className="relative z-10 mb-6 font-sans text-[15px] font-light leading-[1.8] text-white">
+              {card.desc}
+            </p>
+
+            <div className="relative z-10 mb-4 h-px bg-[#C6A75E]/10" />
+
+            <div className="relative z-10 flex flex-wrap items-center gap-x-1.5 gap-y-1">
+              <CheckCircle />
+              {card.tags.map((tag, i) => (
+                <React.Fragment key={tag}>
+                  <span className="font-sans text-[12px] text-white/60">
+                    {tag}
+                  </span>
+
+                  {i < card.tags.length - 1 && (
+                    <span className="text-white/50">•</span>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
+
+      <div className="relative z-10 mx-auto mt-10 h-px max-w-[1250px] bg-gradient-to-r from-transparent via-[#C6A75E]/35 to-transparent" />
     </section>
-  );
+  )
 }
