@@ -117,9 +117,18 @@ export function Hero() {
 
             {/* Desktop buttons */}
             <div className="mt-8 hidden sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-              <Button className="group relative h-[52px] overflow-hidden rounded-full bg-gradient-to-r from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] px-8 text-[11px] font-bold uppercase tracking-[0.1em] text-black shadow-[0_0_50px_rgba(198,167,94,0.4)] transition-all duration-300 hover:scale-[1.03]">
-                Falar com especialista
-              </Button>
+             <Button
+  asChild
+  className="group relative h-[52px] overflow-hidden rounded-full bg-gradient-to-r from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] px-8 text-[11px] font-bold uppercase tracking-[0.1em] text-black shadow-[0_0_50px_rgba(198,167,94,0.4)] transition-all duration-300 hover:scale-[1.03]"
+>
+  <a
+    href="https://wa.me/55555391685956?text=Olá%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Falar com especialista
+  </a>
+</Button>
 
               <Link
                 href="#metodo"
@@ -148,9 +157,18 @@ export function Hero() {
 
  {/* CTA COLADO NA IMAGEM */}
 <div className="relative -mt-8 z-30 flex flex-col gap-3 px-2">
-  <Button className="h-[52px] w-full rounded-full bg-gradient-to-r from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] px-8 text-[11px] font-bold uppercase tracking-[0.1em] text-black">
+<Button
+  asChild
+  className="h-[52px] w-full rounded-full bg-gradient-to-r from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] px-8 text-[11px] font-bold uppercase tracking-[0.1em] text-black"
+>
+  <a
+    href="https://wa.me/55555391685956?text=Olá%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     Falar com especialista
-  </Button>
+  </a>
+</Button>
 
   <Link
     href="#metodo"

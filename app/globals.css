@@ -337,3 +337,12 @@
 .animate-marquee {
   animation: marquee 14s linear infinite;
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none !important; /* IE e Edge antigo */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari */
+}

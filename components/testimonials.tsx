@@ -93,8 +93,14 @@ export function Testimonials() {
             <p className="text-xs tracking-[0.3em] uppercase text-[#C6A75E] font-medium">
               Depoimentos
             </p>
-            <h2 className="text-3xl md:text-4xl font-light mt-2">
-              O que nossos <span className="text-yellow-200 italic">clientes</span> dizem
+
+            <h2
+              className="text-3xl md:text-4xl font-light mt-2"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+              }}
+            >
+              O QUE NOSSOS <span className="text-[#E4C978]">CLIENTES</span> DIZEM
             </h2>
           </div>
 
@@ -129,19 +135,23 @@ export function Testimonials() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="relative min-w-[300px] md:min-w-[380px] snap-start rounded-2xl p-[1px]"
+                className="relative min-w-[300px] md:min-w-[380px] snap-start rounded-2xl p-[1px] group"
               >
-                <div className="relative h-full rounded-2xl p-6 bg-zinc-900/80 border border-white/5 backdrop-blur-sm">
+                {/* glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500/0 via-yellow-500/10 to-yellow-500/0 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
+
+                <div className="relative h-full rounded-2xl p-6 bg-zinc-900/80 border border-white/5 backdrop-blur-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-[1.02] group-hover:border-yellow-500/30 group-hover:shadow-xl group-hover:shadow-yellow-500/10">
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-yellow-500/20">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-yellow-500/20 group">
                       <Image
                         src={t.image}
                         alt={t.name}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
+
                     <p className="text-sm font-medium text-zinc-100">
                       {t.name}
                     </p>

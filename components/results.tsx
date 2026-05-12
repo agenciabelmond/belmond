@@ -90,13 +90,27 @@ export default function Results() {
 
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <header className="mb-10 text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.35em] text-[#e9d2a6]">
-            Soluções Estratégicas
-          </span>
+          <div className="flex items-center justify-center gap-4 w-full">
+  <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#E4C978]/60" />
 
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Crescimento com <span className="italic">controle e escala</span>
-          </h2>
+  <span
+    className="text-[10px] font-bold tracking-[0.35em] text-[#E4C978] uppercase"
+    style={{ fontFamily: "'Lato', sans-serif" }}
+  >
+    Soluções Estratégicas
+  </span>
+
+  <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#E4C978]/60" />
+</div>
+
+          <h2
+  className="mt-4 text-3xl font-black tracking-tight text-white md:text-5xl"
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+  }}
+>
+  CRESCIMENTO COM  <span className=" text-[#E4C978]">CONTROLE</span>
+</h2>
         </header>
 
         {/* CARD */}
@@ -144,7 +158,7 @@ export default function Results() {
             >
               <div className="flex flex-col justify-center p-8 md:p-12">
                 
-                <span className="mb-4 w-fit rounded-full bg-[#e9d2a6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-black">
+                <span className="mb-4 w-fit rounded-full bg-[#E4C978] px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-black">
                   {activeSlide.tag}
                 </span>
 
@@ -226,14 +240,20 @@ export default function Results() {
           </p>
 
           <a
-            href="https://wa.me/+55555391685956?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#1EB85A] px-8 py-4 font-semibold text-white transition hover:-translate-y-1"
-          >
-            Diagnosticar minha clínica
-            <ArrowUpRight className="h-5 w-5" />
-          </a>
+  href="https://wa.me/+55555391685956?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative mt-8 inline-flex h-[52px] items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] px-8 text-[11px] font-bold uppercase tracking-[0.1em] text-black shadow-[0_0_50px_rgba(198,167,94,0.35)] transition-all duration-300 hover:scale-[1.03]"
+>
+  {/* brilho animado */}
+  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
+
+  <span className="relative z-10">
+    Diagnosticar minha clínica
+  </span>
+
+  <ArrowUpRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+</a>
         </div>
       </div>
     </section>

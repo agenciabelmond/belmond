@@ -35,51 +35,55 @@ export default function FaqSection() {
   }
 
   return (
-    <section className="bg-black py-20 md:py-24 -mt-6">
+    <section className="bg-black py-12 md:py-16 -mt-4">
       <div className="container mx-auto max-w-6xl px-6">
-        <div className="grid gap-14 lg:grid-cols-12">
+        <div className="grid gap-10 lg:grid-cols-12">
+
+          {/* Lado esquerdo */}
           <aside className="lg:col-span-5">
-            <div className="sticky top-20">
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#e9d2a6]">
+            <div className="sticky top-16">
+
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#E4C978]">
                 FAQ
               </span>
 
-              <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-                Perguntas
-                <span className="mt-2 block font-serif italic text-[#e9d2a6]">
-                  frequentes
-                </span>
+              <h2
+                className="mt-3 text-2xl font-black tracking-tight text-white md:text-4xl"
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                }}
+              >
+                PERGUNTAS{" "}
+                <span className="text-[#E4C978]">FREQUENTES</span>
               </h2>
 
-              <p className="mt-6 max-w-md text-lg leading-relaxed text-white/50">
-                Tudo que você precisa entender sobre como estruturamos aquisição, conversão e crescimento comercial para clínicas.
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-white/50">
+                Tudo que você precisa entender sobre aquisição, conversão e crescimento comercial.
               </p>
 
-              <button className="mt-10 hidden items-center gap-2 text-[#e9d2a6] transition hover:opacity-80 lg:inline-flex">
+              <button className="mt-6 hidden items-center gap-2 text-[#E4C978] transition hover:opacity-80 lg:inline-flex">
                 Falar com um especialista
                 <ArrowUpRight className="h-4 w-4" />
               </button>
             </div>
           </aside>
 
+          {/* FAQ list */}
           <div className="border-white/10 lg:col-span-7 lg:border-t">
             {FAQ_ITEMS.map((item, index) => {
               const isOpen = activeIndex === index
 
               return (
-                <div
-                  key={item.question}
-                  className="border-b border-white/10"
-                >
+                <div key={item.question} className="border-b border-white/10">
                   <button
                     onClick={() => handleToggle(index)}
-                    className="group flex w-full items-center justify-between py-7 text-left"
+                    className="group flex w-full items-center justify-between py-5 text-left"
                     aria-expanded={isOpen}
                   >
                     <span
-                      className={`text-lg font-medium transition-colors md:text-xl ${
+                      className={`text-base font-medium transition-colors md:text-lg ${
                         isOpen
-                          ? "text-[#e9d2a6]"
+                          ? "text-[#E4C978]"
                           : "text-white/80 group-hover:text-white"
                       }`}
                     >
@@ -90,7 +94,7 @@ export default function FaqSection() {
                       animate={{ rotate: isOpen ? 45 : 0 }}
                       transition={{ duration: 0.25 }}
                     >
-                      <Plus className="h-5 w-5 text-[#e9d2a6]" />
+                      <Plus className="h-4 w-4 text-[#E4C978]" />
                     </motion.div>
                   </button>
 
@@ -100,10 +104,10 @@ export default function FaqSection() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        <p className="max-w-2xl pb-8 text-base leading-relaxed text-white/50">
+                        <p className="max-w-2xl pb-6 text-sm leading-relaxed text-white/50">
                           {item.answer}
                         </p>
                       </motion.div>
@@ -113,7 +117,7 @@ export default function FaqSection() {
               )
             })}
 
-            <button className="mt-10 flex w-full items-center justify-center rounded-2xl bg-[#e9d2a6] px-6 py-4 font-semibold text-black transition hover:opacity-90 lg:hidden">
+            <button className="mt-6 flex w-full items-center justify-center rounded-2xl bg-[#E4C978] px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90 lg:hidden">
               Falar com um especialista
             </button>
           </div>
