@@ -5,7 +5,7 @@ import { useMemo, useState } from "react"
 import {
   ChevronLeft,
   ChevronRight,
- ArrowUpRight,
+  ArrowUpRight,
   TrendingUp,
 } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
@@ -226,6 +226,7 @@ const SLIDES = [
 
     image: "/gerenciamento.png",
   },
+
   {
     titleWhite: "Sites Estratégicos",
     titleGold: "para Clínicas",
@@ -326,7 +327,7 @@ export default function Results() {
           </div>
 
           <h2
-            className="text-3xl font-black tracking-tight text-white md:text-5xl"
+            className="text-center text-[25px] font-black leading-[1.05] tracking-[-0.02em] text-white sm:text-[42px]"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
             }}
@@ -340,7 +341,7 @@ export default function Results() {
 
         {/* CARD */}
         <div
-          className="relative overflow-hidden rounded-2xl shadow-[0_0_80px_rgba(198,167,94,0.07)]"
+          className="relative overflow-visible rounded-2xl shadow-[0_0_80px_rgba(198,167,94,0.07)]"
           style={{
             background: "#000000",
             border: "1px solid rgba(198,167,94,0.15)",
@@ -349,20 +350,23 @@ export default function Results() {
           <div className="absolute left-0 right-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#C6A75E]/60 to-transparent" />
 
           {/* DESKTOP ARROWS */}
-          <div className="pointer-events-none absolute left-0 right-0 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-between px-3 md:flex">
+          <div className="pointer-events-none absolute inset-y-0 left-0 right-0 z-30 hidden md:block">
 
-            <button
-              onClick={() => navigate("prev")}
-              className="pointer-events-auto rounded-full border border-[#C6A75E]/20 bg-black/70 p-3 text-[#C6A75E] backdrop-blur-md transition hover:border-[#C6A75E]/50 hover:bg-[#C6A75E]/10"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
+            {/* LEFT */}
+          {/* LEFT */}
+        <button
+          onClick={() => navigate("prev")}
+          className="pointer-events-auto absolute -left-6 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] text-black shadow-[0_0_25px_rgba(198,167,94,0.35)] transition-all duration-300 hover:scale-105"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
 
+            {/* RIGHT */}
             <button
               onClick={() => navigate("next")}
-              className="pointer-events-auto rounded-full bg-gradient-to-br from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] p-3 text-black transition hover:scale-105 shadow-[0_0_20px_rgba(198,167,94,0.4)]"
+              className="pointer-events-auto absolute -right-6 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] text-black shadow-[0_0_25px_rgba(198,167,94,0.35)] transition-all duration-300 hover:scale-105"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
 
