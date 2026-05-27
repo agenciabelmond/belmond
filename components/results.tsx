@@ -354,20 +354,21 @@ export default function Results() {
 
             {/* LEFT */}
           {/* LEFT */}
-        <button
-          onClick={() => navigate("prev")}
-          className="pointer-events-auto absolute -left-6 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] text-black shadow-[0_0_25px_rgba(198,167,94,0.35)] transition-all duration-300 hover:scale-105"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
+      {/* LEFT */}
+<button
+  onClick={() => navigate("prev")}
+  className="pointer-events-auto absolute -left-6 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#C6A75E] bg-black text-[#C6A75E] shadow-[0_0_25px_rgba(198,167,94,0.20)] transition-all duration-300 hover:scale-105 hover:bg-[#C6A75E]/10"
+>
+  <ChevronLeft className="h-5 w-5" />
+</button>
 
-            {/* RIGHT */}
-            <button
-              onClick={() => navigate("next")}
-              className="pointer-events-auto absolute -right-6 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#E7D3A1] via-[#C6A75E] to-[#A67C35] text-black shadow-[0_0_25px_rgba(198,167,94,0.35)] transition-all duration-300 hover:scale-105"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+{/* RIGHT */}
+<button
+  onClick={() => navigate("next")}
+  className="pointer-events-auto absolute -right-6 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#C6A75E] bg-black text-[#C6A75E] shadow-[0_0_25px_rgba(198,167,94,0.20)] transition-all duration-300 hover:scale-105 hover:bg-[#C6A75E]/10"
+>
+  <ChevronRight className="h-5 w-5" />
+</button>
           </div>
 
           <AnimatePresence mode="wait">
@@ -415,24 +416,22 @@ export default function Results() {
                 </div>
 
                 {/* TITLE */}
-                <h3
-                  className="mb-3 leading-tight"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', Georgia, serif",
-                  }}
-                >
-                  <span className="block text-3xl font-extrabold text-white md:text-4xl">
-                    {activeSlide.titleWhite}
-                  </span>
+             <h3
+  className="mb-3 leading-tight"
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+  }}
+>
+<span className="block text-[22px] font-extrabold text-white md:text-3xl">
+  {activeSlide.titleWhite}
+</span>
 
-                  <span className="block text-3xl font-extrabold text-[#C6A75E] md:text-4xl">
-                    {activeSlide.titleGold}
-                  </span>
-                </h3>
-
+<span className="block text-[22px] font-extrabold text-[#C6A75E] md:text-3xl">
+  {activeSlide.titleGold}
+</span>
+</h3>
                 {/* SUBTITLE */}
-                <p className="mb-4 text-[13px] leading-relaxed text-neutral-300">
+                <p className="mb-4 text-[15px] leading-relaxed text-neutral-300">
                   {activeSlide.subtitle}
                 </p>
 
@@ -468,7 +467,7 @@ export default function Results() {
                           </svg>
                         </div>
 
-                        <span className="text-[13px] leading-snug text-neutral-200">
+                        <span className="text-[14px] leading-snug text-neutral-200">
                           <HighlightText
                             text={point.full}
                             highlight={point.highlight}
