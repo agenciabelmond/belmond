@@ -193,7 +193,7 @@ const SLIDES = [
     badgeLine2:
       "faz o paciente sentir que encontrou a clínica certa.",
 
-    image: "/gmn.png",
+    image: "/google.png",
   },
 
   {
