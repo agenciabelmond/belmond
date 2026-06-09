@@ -224,7 +224,7 @@ const SLIDES = [
     badgeLine2:
       "Eles escolhem a clínica que transmite mais autoridade e confiança.",
 
-    image: "/gerenciamento.png",
+    image: "/socialmedia.png",
   },
 
   {
