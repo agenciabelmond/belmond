@@ -69,7 +69,7 @@ export function PricingSection() {
   return (
     <section
       id="planos"
-      className="relative overflow-hidden py-12 px-4 md:px-8 bg-[#080808]"
+      className="relative overflow-hidden py-8 md:py-10 px-4 md:px-8 bg-[#080808]"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -78,7 +78,8 @@ export function PricingSection() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-10">
+        {/* Header */}
+        <div className="text-center mb-6 md:mb-8">
           <h2 className="text-2xl md:text-4xl font-semibold text-white mb-3 leading-snug">
             Treinamento Comercial para{" "}
             <span className="text-[#C6A75E]">
@@ -92,6 +93,7 @@ export function PricingSection() {
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {trainingPlans.map((plan) => {
             const Icon = plan.icon;
@@ -118,6 +120,7 @@ export function PricingSection() {
                   borderColor: plan.accent,
                 }}
               >
+                {/* Top Accent */}
                 <div
                   className="h-2 rounded-t-3xl"
                   style={{
@@ -125,6 +128,7 @@ export function PricingSection() {
                   }}
                 />
 
+                {/* Badge */}
                 {plan.badge && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <div className="bg-[#8F6B2E] text-white text-[10px] font-bold tracking-[0.15em] px-4 py-1.5 rounded-full">
@@ -134,7 +138,8 @@ export function PricingSection() {
                 )}
 
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex justify-center mb-5">
+                  {/* Icon */}
+                  <div className="flex justify-center mb-3">
                     <div
                       className="w-12 h-12 rounded-full border flex items-center justify-center"
                       style={{
@@ -150,6 +155,7 @@ export function PricingSection() {
                     </div>
                   </div>
 
+                  {/* Title */}
                   <h3 className="text-center text-base font-semibold text-[#111] leading-snug min-h-[44px]">
                     {plan.name}
                   </h3>
@@ -161,6 +167,7 @@ export function PricingSection() {
                     }}
                   />
 
+                  {/* Price */}
                   <div className="text-center">
                     <div
                       className="text-4xl font-bold tracking-tight"
@@ -176,7 +183,8 @@ export function PricingSection() {
                     </div>
                   </div>
 
-                  <ul className="mt-6 space-y-3 flex-1">
+                  {/* Features */}
+                  <ul className="mt-4 space-y-2.5 flex-1">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
@@ -197,9 +205,10 @@ export function PricingSection() {
                     ))}
                   </ul>
 
+                  {/* Button */}
                   <Link
                     href={plan.ctaLink}
-                    className="mt-7 block w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
+                    className="mt-5 block w-full text-center py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
                     style={{
                       backgroundColor: plan.accentDark,
                       color: "#FFFFFF",
