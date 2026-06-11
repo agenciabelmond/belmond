@@ -3,17 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 :root {
-  /* Fundo */
+  /* Background */
   --background: oklch(0.08 0.005 260);
   --foreground: oklch(0.98 0 0);
 
-  /* Card branco */
-  --card: oklch(0.98 0 0);
-  --card-foreground: oklch(0.15 0 0);
+  /* Cards Premium */
+  --card: oklch(0.11 0.01 260);
+  --card-foreground: oklch(0.98 0 0);
 
-  --popover: oklch(0.98 0 0);
-  --popover-foreground: oklch(0.15 0 0);
+  --popover: oklch(0.11 0.01 260);
+  --popover-foreground: oklch(0.98 0 0);
 
   /* Dourado */
   --primary: oklch(0.78 0.12 85);
@@ -22,8 +23,9 @@
   --secondary: oklch(0.15 0.005 260);
   --secondary-foreground: oklch(0.98 0 0);
 
-  --muted: oklch(0.94 0 0);
-  --muted-foreground: oklch(0.45 0 0);
+  /* Textos */
+  --muted: oklch(0.16 0.005 260);
+  --muted-foreground: oklch(0.72 0 0);
 
   --accent: oklch(0.78 0.12 85);
   --accent-foreground: oklch(0.08 0.005 260);
@@ -31,11 +33,12 @@
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.88 0 0);
-  --input: oklch(0.94 0 0);
+  /* Bordas */
+  --border: oklch(0.22 0.01 260);
+  --input: oklch(0.15 0.005 260);
   --ring: oklch(0.78 0.12 85);
 
-  --radius: 1rem;
+  --radius: 1.25rem;
 
   /* Charts */
   --chart-1: oklch(0.78 0.12 85);
@@ -45,16 +48,16 @@
   --chart-5: oklch(0.75 0.18 60);
 
   /* Sidebar */
-  --sidebar: oklch(0.12 0.005 260);
+  --sidebar: oklch(0.10 0.005 260);
   --sidebar-foreground: oklch(0.98 0 0);
 
   --sidebar-primary: oklch(0.78 0.12 85);
   --sidebar-primary-foreground: oklch(0.08 0.005 260);
 
-  --sidebar-accent: oklch(0.18 0.005 260);
+  --sidebar-accent: oklch(0.15 0.005 260);
   --sidebar-accent-foreground: oklch(0.98 0 0);
 
-  --sidebar-border: oklch(0.25 0.01 260);
+  --sidebar-border: oklch(0.22 0.01 260);
   --sidebar-ring: oklch(0.78 0.12 85);
 }
 
@@ -162,5 +165,18 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Montserrat", sans-serif;
+
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(212, 175, 55, 0.08),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(212, 175, 55, 0.08),
+        transparent 35%
+      ),
+      #050505;
   }
 }

@@ -13,17 +13,17 @@ export async function GET() {
           handle: 'agenciabelmond',
 
           redirect_url:
-            'https://www.agenciabelmond.com.br/pagamentos/obrigado',
+            'hhttps://www.agenciabelmond.com.br/pagamentos/obrigado',
 
           order_nsu: `pedido-${Date.now()}`,
 
           items: [
-           {
-  quantity: 1,
-  price: 119700, // R$ 1.197,00
-  description: 'Treinamento Premium Belmond',
-  digital: true,
-}
+            {
+              quantity: 1,
+              price: 219700, // R$ 2.197,00
+              description: 'Treinamento Premium Belmond',
+              digital: true,
+            },
           ],
         }),
       }
