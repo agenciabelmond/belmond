@@ -16,19 +16,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/belmondlogo.jpg",
+        url: "/icon.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/belmondlogo.jpg",
+        url: "/icon.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/belmondlogo.jpg",
-        type: "image/jpeg",
+        url: "/icon.png",
+        type: "image/png",
       },
     ],
-    apple: "/belmondlogo.jpg",
+    apple: "/icon.png",
   },
 };
 

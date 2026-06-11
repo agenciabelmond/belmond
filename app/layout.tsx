@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   creator: "Belmond",
 
   icons: {
-    icon: "/logo-belmond.png",
-    shortcut: "/logo-belmond.png",
-    apple: "/logo-belmond.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 
   metadataBase: new URL("https://agenciabelmond.com.br"),
