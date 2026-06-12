@@ -5,10 +5,10 @@ import Link from "next/link";
 const trainingPlans = [
   {
     name: "Treinamento Premium Belmond",
-    price: "R$ 1.197",
+    price: "R$ 1.297,00",
     priceLabel: "pagamento único",
     ctaText: "SEGUIR PARA PAGAMENTO",
-    ctaLink: "/api/checkout",
+    ctaLink: "/api/checkout-google",
     accent: "#C6A75E",
     accentDark: "#8F6B2E",
   },

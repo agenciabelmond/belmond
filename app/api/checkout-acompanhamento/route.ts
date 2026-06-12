@@ -13,7 +13,7 @@ export async function GET() {
           handle: 'agenciabelmond',
 
           redirect_url:
-            'https://www.agenciabelmond.com.br/pagamentos/obrigado',
+            'hhttps://www.agenciabelmond.com.br/pagamentos/obrigado',
 
           order_nsu: `pedido-${Date.now()}`,
 
