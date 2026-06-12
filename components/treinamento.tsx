@@ -37,7 +37,7 @@ export function PricingSection() {
           </h2>
 
           <p className="text-zinc-400 text-sm max-w-xl mx-auto md:mb-4">
-            Um treinamento completo, direto ao ponto e focado em resultados
+            Treinamento completo, direto ao ponto e focado em resultados
             reais.
           </p>
         </div>
