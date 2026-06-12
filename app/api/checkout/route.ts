@@ -18,12 +18,12 @@ export async function GET() {
           order_nsu: `pedido-${Date.now()}`,
 
           items: [
-           {
-  quantity: 1,
-  price: 119700, // R$ 1.197,00
-  description: 'Treinamento Premium Belmond',
-  digital: true,
-}
+                  {
+          quantity: 1,
+          price: 119700, // R$ 1.197,00
+          description: 'Treinamento Premium Belmond',
+          digital: true,
+        }
           ],
         }),
       }
