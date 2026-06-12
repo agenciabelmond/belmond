@@ -263,7 +263,7 @@ const SLIDES = [
     badgeLine2:
       "Ele transmite valor, autoridade e desejo pela sua clínica.",
 
-    image: "/site.png",
+    image: "/siteks.png",
   },
 ]
 
